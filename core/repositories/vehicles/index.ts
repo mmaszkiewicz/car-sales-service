@@ -1,13 +1,13 @@
 import pgPromise from 'pg-promise';
-import {getEnv} from "../../../lib/utils";
+import { getEnv } from '../../../lib/utils';
 
 export const pgp = pgPromise({});
 // Connection is being managed internally by the lib through pulling
 const db = pgp(getEnv('DB_URL'));
 
 export async function findStateById(vehicleId: number, timestamp: string) {
-    // Query selects the state entry that is closest in the past to the timestamp
-    const query: string = `
+  // Query selects the state entry that is closest in the past to the timestamp
+  const query: string = `
     SELECT
         v.id,
         v.make,
@@ -24,6 +24,6 @@ export async function findStateById(vehicleId: number, timestamp: string) {
     ORDER BY
         timestamp DESC
     LIMIT
-        1`
-    return db.oneOrNone(query, [vehicleId, timestamp]);
+        1`;
+  return db.oneOrNone(query, [vehicleId, timestamp]);
 }
