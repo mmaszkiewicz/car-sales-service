@@ -1,7 +1,7 @@
 import pgPromise from 'pg-promise';
 import {getEnv} from "../../../lib/utils";
 
-const pgp = pgPromise({});
+export const pgp = pgPromise({});
 // Connection is being managed internally by the lib through pulling
 const db = pgp(getEnv('DB_URL'));
 
