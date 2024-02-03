@@ -1,13 +1,19 @@
 # Car Sales Service
 
-### local development
+## local development
 
-    npm run dev
+Start the server
+    
+`npm run dev`
+
+Run integration tests
+
+`npm test`
 
 ## build
 
-    npm run build
+`npm build`
 
 ## run
-    npm start
+`npm start`
 
