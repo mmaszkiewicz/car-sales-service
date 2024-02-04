@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.ts",
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc",
+    "start": "node .dist/"
   },
   "author": "Michal Maszkiewicz",
   "license": "UNLICENSED",
