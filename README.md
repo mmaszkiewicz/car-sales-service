@@ -1,19 +1,25 @@
 # Car Sales Service
 
-## local development
+## Setup
 
-Start the server
+configure env vars found in .env
+
+## Local development
+
+#### Start the server
     
 `npm run dev`
 
-Run integration tests
+#### Run integration tests (requires DB to run, but not the server)
 
 `npm test`
 
-## build
+## Run in production
 
-`npm build`
+#### Build
 
-## run
+`npm run build`
+
+#### Run
 `npm start`
 
